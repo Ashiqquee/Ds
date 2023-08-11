@@ -19,5 +19,5 @@ const quickSort = array => {
     return [...quickSort(left),pivot,...quickSort(right)]
 };
 
-// console.log(quickSort(arr));
+console.log(quickSort(arr));
 

@@ -31,6 +31,8 @@ class arrayStack {
         this.size--;
     };
 
+  
+
     print(){
         let curr = this.top;
 
@@ -51,9 +53,8 @@ newStack.push(30);
 
 newStack.print();
 
-newStack.pop();
-
 newStack.print();
+
 
 
 
@@ -84,8 +85,24 @@ class Stack {
     };
 
     pop() {
+        let deleted = this.items[this.size - 1];
         delete this.items[this.size - 1];
+        this.size--;
+        return deleted;
     };
+
+
+    reverse() {
+        let arr = [];
+
+        for (let i = 0; i < this.size; i++) {
+            
+            arr.push(this.pop());
+            this.size--;
+            i--;
+
+        }
+    }
 
     print() {
         console.log(this.items.toString());
@@ -102,8 +119,6 @@ stack.push(20);
 
 stack.push(30);
 
-stack.print();
-
-stack.pop();
+stack.reverse();
 
 stack.print();

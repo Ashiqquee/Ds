@@ -7,7 +7,7 @@ class Node {
     }
 };
 
-class arrayStack {
+class linkedStack {
     constructor() {
         this.top = null;
         this.size = 0;
@@ -43,7 +43,7 @@ class arrayStack {
     }
 };
 
-const newStack = new arrayStack();
+const newStack = new linkedStack();
 
 newStack.push(10);
 
@@ -100,7 +100,6 @@ class Stack {
             arr.push(this.pop());
             this.size--;
             i--;
-
         }
     }
 

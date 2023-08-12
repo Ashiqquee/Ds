@@ -22,3 +22,26 @@ const binarySearch = (arr,value) => {
 
 console.log(binarySearch(array,5));
 console.log(binarySearch(array, 15));
+
+
+//------Binary Search Recursion------//
+
+const binarySearchRecursion = (arr,target,left=0,right=arr.length-1) => {
+    if(left > right){
+        return -1;
+    }
+
+    let mid = Math.floor((left+right)/2);
+
+    if(arr[mid] === target) return mid ;
+
+    if(arr[mid]< target) return binarySearchRecursion(arr,target,mid+1,right);
+
+    return binarySearchRecursion(arr,target,left,right-1)
+
+}
+
+console.log(binarySearchRecursion(array,5));
+
+console.log(binarySearchRecursion(array, 7));
+
